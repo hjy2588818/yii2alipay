@@ -8,5 +8,12 @@ namespace iqianfang\yii2alipay;
  */
 class Alipay
 {
+    //配置数组
+    public $config = [];
 
+    public function varConfig()
+    {
+        echo '<pre>';
+        var_dump($this->config);
+    }
 }
