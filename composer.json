@@ -1,11 +1,12 @@
 {
     "name": "iqianfang/yii2alipay",
-    "description": "yii2 支付宝即时到帐接口扩展组件",
+    "description": "yii2 支付宝(alipay)即时到帐接口扩展组件",
     "license": "null",
     "authors": [
         {
             "name": "sdqianfang",
-            "email": "78861190@qq.com"
+            "email": "78861190@qq.com",
+            "home": "http://www.qianfang.me"
         }
     ],
     "minimum-stability": "stable",
