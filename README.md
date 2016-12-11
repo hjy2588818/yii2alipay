@@ -1,7 +1,14 @@
 # Yii2支付宝即时到帐接口组件
 适用于支付宝即时到帐接口，具体使用方法如下：
 ## 安装
-
+通过composer安装，在项目目录下运行如下代码：
+```bash
+composer require "iqianfang/yii2alipay:1.0.0"
+```
+或者修改composer.json的require部分，添加
+```javascript
+"iqianfang/yii2alipay": "1.0.0",
+```
 ## 配置使用
 ### 一、配置Yii2组件
 在common下的全局配置文件main.php中添加组件配置，请参考如下alipay的配置：
@@ -56,7 +63,7 @@ Yii::$app->alipay->submit($order);
 #### 2、支付结果通知
 根据`配置`里设置的控制器及action编写代码。以上面我的配置为例，创建控制器Payment，该控制器用于接受支付宝同步/异步通知，下面两个action分别对应配置中设定的action（我的逻辑比较简单所以处理都放组件了，你的视情况自己看着办）：
 ```php
-class PaymentController extends FrontendController
+class PaymentController extends Controller
 {
     /**
      * 关闭csrf，以便异步通知可访问
