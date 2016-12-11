@@ -35,12 +35,6 @@ class Alipay extends Component
         $this->config['return_url'] = Yii::$app->urlManager->createAbsoluteUrl($this->config['return_url']);
     }
 
-    public function varConfig()
-    {
-        echo '<pre>';
-        var_dump($this->config, $this->_config);
-    }
-
     /**
      * @param Order $order
      * @return \提交表单HTML文本
