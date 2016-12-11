@@ -56,6 +56,8 @@ Yii::$app->alipay->submit($order);
 #### 2、支付结果通知
 根据`配置`里设置的控制器及action编写代码。以上面我的配置为例，创建控制器Payment，该控制器用于接受支付宝同步/异步通知，下面两个action分别对应配置中设定的action（我的逻辑比较简单所以处理都放组件了，你的视情况自己看着办）：
 ```php
+class PaymentController extends FrontendController
+{
     /**
      * 关闭csrf，以便异步通知可访问
      * @param \yii\base\Action $action
@@ -90,6 +92,7 @@ Yii::$app->alipay->submit($order);
             'rs' => $rs
         ]);
     }
+}
 ```
 ## 其他
 没用curl，直接用了官方demo的现成代码，如果有需要请参考支付宝官方文档再进一步处理即可。
